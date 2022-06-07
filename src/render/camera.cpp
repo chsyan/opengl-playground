@@ -94,8 +94,8 @@ void Camera::process_input(float delta_time)
     else if (zoom < 1)
         zoom = 1;
 
-    fmt::print("x: {} .. y:{} .. z:{} .. fx: {} .. fy: {} .. fz: {} .. p: {} .. y: {}\n",
-               position.x, position.y, position.z, front.x, front.y, front.z, pitch, yaw);
+    // fmt::print("x: {} .. y:{} .. z:{} .. fx: {} .. fy: {} .. fz: {} .. p: {} .. y: {}\n",
+    //            position.x, position.y, position.z, front.x, front.y, front.z, pitch, yaw);
 }
 void Camera::update_camera_vectors()
 {

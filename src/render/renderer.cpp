@@ -1,6 +1,6 @@
 #include "renderer.h"
 #include "resource_manager.h"
-#include <fmt/core.h>
+#include <fmt/std.h>
 #include "camera.h"
 #include "cube.h"
 #include "sphere.h"
@@ -70,8 +70,6 @@ void resize_callback(GLFWwindow *window, int width, int height) {}
 
 int Renderer::init()
 {
-    fmt::print("Renderer init start");
-
     // Init OpenGL library
     if (!glfwInit())
         return -1;
@@ -97,11 +95,6 @@ int Renderer::init()
 
     // Init glad
     gladLoadGL(glfwGetProcAddress);
-
-    // Show OpenGL info
-    fmt::print("OpenGL {}\n", glGetString(GL_VERSION));
-    fmt::print("Version GLSL {}\n", glGetString(GL_SHADING_LANGUAGE_VERSION));
-    fmt::print("GPU {}\n", glGetString(GL_RENDERER));
 
     // Set callbacks
     glfwSetScrollCallback(window, scroll_callback);
